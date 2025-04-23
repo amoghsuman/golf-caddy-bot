@@ -39,7 +39,7 @@ def suggest_club(distance, wind):
 
 def get_swing_tip(club, distance, wind):
     prompt = f"I'm a golf swing expert. Suggest a swing tip for a {club} at {distance} yards with wind {wind}."
-    completion = openai.ChatCompletion.create(
+    completion = openai.chat.completions.create(
         model="gpt-4",
         messages=[{"role": "user", "content": prompt}]
     )
